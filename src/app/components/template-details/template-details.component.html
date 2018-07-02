@@ -1,0 +1,66 @@
+<mat-card>
+  <mat-card-content>
+
+    <section class="example-section">
+      <h2>Template info: <span *ngIf="template">{{template.id}}</span></h2>
+    </section>
+    <section class="example-section">
+      <label class="example-margin">Sizes:</label>
+      <mat-form-field>
+        <mat-select [(value)]="selectedSize">
+          <mat-option *ngFor="let size of sizes" value={{size}}>{{size}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <label class="example-margin">Types:</label>
+      <mat-form-field>
+        <mat-select [(value)]="selectedType">
+          <mat-option *ngFor="let type of types" value={{type}}>{{type}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <label class="example-margin">Placements:</label>
+      <mat-form-field>
+        <mat-select [(value)]="selectedPlacement">
+          <mat-option *ngFor="let placement of placements" value={{placement}}>{{placement}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <label class="example-margin">os:</label>
+      <mat-form-field>
+        <mat-select [(value)]="selectedOs">
+          <mat-option *ngFor="let os of operationSystems" value={{os}}>{{os}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </section>
+
+    <section class="example-section">
+      <mat-checkbox class="example-margin" [(ngModel)]="showClose" (change)="onChange($event)">showClose</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="testMode" (change)="onChange($event)">testMode</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="isMobileWeb" (change)="onChange($event)">isMobileWeb</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="isPrivate" (change)="onChange($event)">isPrivate</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="isMraid" (change)="onChange($event)">isMraid</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="isOverlay" (change)="onChange($event)">isOverlay</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="isBlind" (change)="onChange($event)">isBlind</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="isEngagement" (change)="onChange($event)">isEngagement</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+      <mat-form-field>
+        <input matInput placeholder="Partner" value="{{partner}}">
+      </mat-form-field>
+    </section>
+
+    <section class="example-section">
+      <mat-form-field>
+        <input matInput placeholder="Expression" value="{{expression}}">
+      </mat-form-field>
+    </section>
+
+    <section class="example-section">
+      <mat-form-field>
+        <input matInput placeholder="Creative expression" value="{{creativeExpression}}">
+      </mat-form-field>
+    </section>
+
+
+  </mat-card-content>
+</mat-card>
+
